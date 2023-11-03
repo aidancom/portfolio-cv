@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
+import Cabecera from "../components/Cabecera";
 
-const NotFound = () => {
+export default function NotFound() {
   return (
     <div>
-      <h1>La pagina que buscas no existe</h1>
+      <Cabecera>La pagina que buscas no existe</Cabecera>
     </div>
-  )
+  );
 }
-
-export default NotFound
