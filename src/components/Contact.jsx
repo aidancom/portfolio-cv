@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Cabecera from "./Cabecera";
 
 const Contact = () => {
   return (
     <div>
-      <h1>Contacto</h1>
+      <Cabecera>Contacto</Cabecera>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

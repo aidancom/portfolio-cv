@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Cabecera from "../components/Cabecera";
 
 const Home = () => {
   return (
     <div>
-        <h1>Hola</h1>
+      <Cabecera>Hola</Cabecera>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
