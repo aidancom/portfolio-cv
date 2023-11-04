@@ -10,8 +10,8 @@ const PreHeader = () => {
         <div className='preheader-social'>
             <nav>
               <ul>
-                <li><a href=""><FontAwesomeIcon icon={faInstagram} /></a></li>
-                <li><a href=""><FontAwesomeIcon icon={faFacebook} /></a></li>
+                <li><a href="https://www.instagram.com/a.v.m_99/"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                <li><a href="https://www.facebook.com/aidan.verdejomaynero?locale=es_ES"><FontAwesomeIcon icon={faFacebook} /></a></li>
                 <li><a href="https://www.linkedin.com/in/aidan-verdejo-48496a133/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
                 <li><a href="https://github.com/aidancom/"><FontAwesomeIcon icon={faGithub} /></a></li>
               </ul>

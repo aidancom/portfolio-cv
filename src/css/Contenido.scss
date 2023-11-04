@@ -1,0 +1,43 @@
+.cuerpo {
+    &-contenido {
+        width: 900px;
+        height: 200px;
+       &-cajas {
+        display: flex;
+        div {
+            text-align: center;
+            flex-basis: calc(100px * 3);
+            a {
+                text-decoration: none;
+                svg {
+                    transition: 0.2s linear;
+                    font-size: 25px;
+                    color: #fff;
+                    border: 3px solid #fff;
+                    border-radius: 100%;
+                    padding: 30px;
+                }
+                    p {
+                        font-size: 30px;
+                        color: #fff;
+                       
+                    }
+                    &:hover {
+                        
+                        svg {
+                            transition: 0.2s linear;
+                            font-size: 35px;
+                            background-color: #fff;
+                            color: #000;
+                        }
+                        p {
+                            color: #fff;
+                           
+                        }
+                    }
+            }
+           
+        }
+       }
+    }
+}

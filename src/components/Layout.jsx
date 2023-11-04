@@ -1,39 +1,31 @@
-import { Outlet, Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import "../css/Header.scss";
 
+
 const Layout = () => {
+  const location = useLocation();
   return (
     <>
       <header>
         <nav>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
+            <li className={location.pathname === '/' ? 'active' : ''}>
+              <Link to="/">Incio</Link>
             </li>
-            <li>
+            <li className={location.pathname === '/about' ? 'active' : ''}>
               <Link to="about">Sobre mi</Link>
             </li>
-            <li>
+            <li className={location.pathname === '/contact' ? 'active' : ''}>
               <Link to="contact">Contacto</Link>
             </li>
-            <li>
+            <li className={location.pathname === '/proyects' ? 'active' : ''}>
               <Link to="proyects">Proyectos</Link>
             </li>
           </ul>
         </nav>
       </header>
       <main>
-        <AnimatePresence mode="wait">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
             <Outlet />
-          </motion.div>
-        </AnimatePresence>
       </main>
     </>
   );

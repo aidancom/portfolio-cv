@@ -13,6 +13,51 @@
                 a {
                     color: #fff;
                     text-decoration: none;
+                    
+                }
+            }
+        }
+    }
+    &-social {
+        nav {
+            ul {
+                li {
+                    &:nth-child(1) {
+                        a {
+                            transition: 0.3s linear all;
+                            &:hover {
+                                transition: 0.3s linear all;
+                                color: #ff8f00fc;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        a {
+                            transition: 0.3s linear all;
+                            &:hover {
+                                transition: 0.3s linear all;
+                                color: #3b5998;
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        a {
+                            transition: 0.3s linear all;
+                            &:hover {
+                                transition: 0.3s linear all;
+                                color: #0077B5;
+                            }
+                        }
+                    }
+                    &:nth-child(4) {
+                        a {
+                            transition: 0.3s linear all;
+                            &:hover {
+                                transition: 0.3s linear all;
+                                color: rgba(0, 0, 0);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -24,7 +69,9 @@
                     a {
                         svg {
                             margin-right: 10px;
+                           
                         }
+                       
                     }
                 }
             }
