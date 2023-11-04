@@ -1,9 +1,15 @@
 import React from 'react'
+import Cabecera from './Cabecera'
 
 const Proyects = () => {
   return (
     <div>
-      <h1>Proyectos</h1>
+      <Cabecera>Proyectos</Cabecera>
+      <div className="cuerpo">
+          <div className=''>
+            
+          </div>
+      </div>
     </div>
   )
 }

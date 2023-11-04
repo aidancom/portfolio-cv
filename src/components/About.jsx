@@ -1,9 +1,13 @@
 import React from 'react'
+import Cabecera from './Cabecera'
 
 const About = () => {
   return (
   <>
-  <h1>Sobre mi</h1>
+    <Cabecera>Sobre mi</Cabecera>
+    <div className="cuerpo">
+        
+        </div>
   </>
   )
 }
