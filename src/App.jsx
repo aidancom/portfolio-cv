@@ -11,7 +11,11 @@ import Contact from "./components/Contact";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
+
 function App() {
+  const [abierto, setAbierto] = useState(false);
   const subir = () => {
     window.scrollTo({
       top: 0,
@@ -19,13 +23,6 @@ function App() {
     })
   }
   const [abierto, setAbierto] = useState(false);
-  useEffect(() => {
-    const audio = new Audio(music);
-    audio.play();
-    return () => {
-      audio.pause();
-    };
-  }, []);
   return (
     <>
       <BrowserRouter>

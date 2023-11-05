@@ -3,7 +3,6 @@ import '../css/Cabecera.scss';
 
 export default function Cabecera({ children }) {
   const location = useLocation();
-  console.log(location)
   return (
 
     <>
