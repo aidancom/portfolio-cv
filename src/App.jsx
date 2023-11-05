@@ -22,7 +22,7 @@ function App() {
       behavior: 'smooth'
     })
   }
-  const [abierto, setAbierto] = useState(false);
+ 
   return (
     <>
       <BrowserRouter>
