@@ -6,7 +6,7 @@ body {
     
     .cuerpo {
         background-color: rgba(0, 0, 0, 0);
-        width: 1300px;
+        width: 80%;
         margin-top: 15px !important;
         margin-bottom: 15px !important;
         margin: 0 auto;
@@ -16,6 +16,42 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
+    .subir {
+        position: fixed;
+        bottom: 5%;
+        left: 95%;
+        width: 50px;
+        border: 1px solid #fff;
+        text-align: center;
+        transition: 0.2s linear all;
+        svg {
+            transition: 0.2s linear all;
+            color: #fff;
+        }
+        &:hover {
+            transition: 0.2s linear all;
+            background-color: #fff;
+            svg {
+                transition: 0.2s linear all;
+                color: #000;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        .subir {
+           left: 90%; 
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        .subir {
+           left: 80%; 
+        }
     }
 }
 
