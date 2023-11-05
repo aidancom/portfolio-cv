@@ -1,0 +1,19 @@
+.faq {
+    width: 87%;
+    h2 {
+        color: #fff;
+        font-size: 40px;
+        text-align: center;
+    }
+    .accordion {
+        .accordion__item {
+            .accordion__heading {
+                .accordion__button {
+                    background-color: #fff;
+                    color: #000;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
