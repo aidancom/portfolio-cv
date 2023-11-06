@@ -9,7 +9,7 @@ import scss from '../assets/img/sass.png';
 import react from '../assets/img/react.png';
 import jquery from '../assets/img/jquery.png';
 import typescript from '../assets/img/typescript.png';
-import javascript from '../assets/img/javascript.png';
+import js from '../assets/img/js.png';
 
 import {
     Accordion,
@@ -79,7 +79,7 @@ export default function Faq() {
                                 <p>SASS</p>
                             </div>
                             <div>
-                                <img src={javascript} />
+                                <img src={js} />
                                 <p>JavaScript</p>
                             </div>
                         </div>
