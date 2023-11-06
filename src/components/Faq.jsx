@@ -1,5 +1,14 @@
 import React from 'react';
-import '../css/Faq.scss'
+import '../css/Faq.scss';
+import html from '../assets/img/html.png';
+import php from '../assets/img/php.png';
+import angular from '../assets/img/angular.png';
+import java from '../assets/img/java.png';
+import css from '../assets/img/css.png';
+import scss from '../assets/img/sass.png';
+import react from '../assets/img/react.png';
+import jquery from '../assets/img/jquery.png';
+import typescript from '../assets/img/typescript.png';
 
 import {
     Accordion,
@@ -57,48 +66,48 @@ export default function Faq() {
                         <p className="front">Front-End</p>
                         <div className="lenguajes-front">
                             <div>
-                                <img src="../src/assets/img/html.png" />
+                                <img src={html} />
                                 <p>HTML</p>
                             </div>
                             <div>
-                                <img src="../src/assets/img/css.png" />
+                               <img src={css} />
                                 <p>CSS</p>
                             </div>
                             <div>
-                                <img src="../src/assets/img/sass.png" />
+                                <img src={scss} />
                                 <p>SASS</p>
                             </div>
                             <div>
-                                <img src="../src/assets/img/js.png" />
+                                <img src={javascript} />
                                 <p>JavaScript</p>
                             </div>
                         </div>
                         <div className="lenguajes-front">
                             <div>
-                                <img src="../src/assets/img/jquery.png" />
+                                <img src={jquery} />
                                 <p>Jquery</p>
                             </div>
                             <div>
-                                <img src="../src/assets/img/typescript.png" />
+                                <img src={typescript} />
                                 <p>TypeScript</p>
                             </div>
                             <div>
-                                <img src="../src/assets/img/react.png" />
+                                <img src={react} />
                                 <p>React</p>
                             </div>
                             <div>
-                                <img src="../src/assets/img/angular.png" />
+                                <img src={angular} />
                                 <p>Angular</p>
                             </div>
                         </div>
                         <p className='back'>Back-End</p>
                         <div class="lenguajes-back"> 
                             <div>
-                                <img src="../src/assets/img/php.png" />
+                                <img src={php} />
                                 <p>PHP</p>
                             </div>
                             <div>
-                                <img src="../src/assets/img/java.png" />
+                                <img src={java} />
                                 <p>Java</p>
                             </div>
                         </div>
