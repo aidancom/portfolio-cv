@@ -5,7 +5,9 @@ import Contenidoweb from "./Contenidoweb";
 
 const Home = () => {
   return (
+    
     <div className="home">
+      
       <Cabecera>Hola</Cabecera>
       <div className="cuerpo">
         <h2>Bienvenidos a mi pagina web</h2>

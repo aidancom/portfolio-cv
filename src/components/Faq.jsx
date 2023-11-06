@@ -24,7 +24,13 @@ export default function Faq() {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                       
+                       Mi nombre es Aidan Verdejo Maynero, resido en Burjassot (Valencia) y me encanta el mundo del diseño web (todo lo que tiene que
+                       ver con frontend)
+                    </p>
+                    <p>
+                       Aunque tambien tengo concimientos y actualmente estoy aprendiendo algun lenguaje de backend (como por ejemplo PHP), prefiero
+                       enfocarme en la parte de frontend ya que, como he dicho antes, me gusta todo lo relacionado con el diseño web y la interfaz de
+                       usuario
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
@@ -34,7 +40,8 @@ export default function Faq() {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                       
+                       No hay mucho que decir aqui, lo tipico: salir con amigos, estar con el ordenador (ya sea jugando, programando o haciendo otras cosas),
+
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
@@ -44,7 +51,71 @@ export default function Faq() {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                       
+                       Actualmente estoy ampliando esta parte, cada dia aprendiendo cosas nuevas poco a poco, pero de momento se puede resumir en esto:
+                    </p>
+                    <div className="lenguajes">
+                        <p className="front">Front-End</p>
+                        <div className="lenguajes-front">
+                            <div>
+                                <img src="../src/assets/img/html.png" />
+                                <p>HTML</p>
+                            </div>
+                            <div>
+                                <img src="../src/assets/img/css.png" />
+                                <p>CSS</p>
+                            </div>
+                            <div>
+                                <img src="../src/assets/img/sass.png" />
+                                <p>SASS</p>
+                            </div>
+                            <div>
+                                <img src="../src/assets/img/js.png" />
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                        <div className="lenguajes-front">
+                            <div>
+                                <img src="../src/assets/img/jquery.png" />
+                                <p>Jquery</p>
+                            </div>
+                            <div>
+                                <img src="../src/assets/img/typescript.png" />
+                                <p>TypeScript</p>
+                            </div>
+                            <div>
+                                <img src="../src/assets/img/react.png" />
+                                <p>React</p>
+                            </div>
+                            <div>
+                                <img src="../src/assets/img/angular.png" />
+                                <p>Angular</p>
+                            </div>
+                        </div>
+                        <p className='back'>Back-End</p>
+                        <div class="lenguajes-back"> 
+                            <div>
+                                <img src="../src/assets/img/php.png" />
+                                <p>PHP</p>
+                            </div>
+                            <div>
+                                <img src="../src/assets/img/java.png" />
+                                <p>Java</p>
+                            </div>
+                        </div>
+                    </div>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading>
+                    <AccordionItemButton>Experiencia laboral</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                    <p>
+                       He trabajado en Avantio durante 3 años, los cuales me han servido para formarme y saber lo que es el mundo laboral.<br />
+                       Alli puede no solo pude reforzar lo que ya sabia, sino aprender cosas nuevas (como SCSS, del cual no tenia ni idea de su existencia),
+                       ofreciendo retos conforme ibas avanzando (desde hacer simples cambios webs como cambiar imagenes, textos y demas hasta tocar el
+                       framework de la web para mejorarlo), por lo cual me he podido especializar en la creacion y mantenimiento de webs para clientes, asi como
+                       tambien la resolucion de problemas que puedan ir surgiendo a lo largo de la jornada
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
@@ -54,7 +125,13 @@ export default function Faq() {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                       
+                        Busco un trabajo en el que no solo pueda estar de forma estable, sino tambien en el que pueda aprender cada dia algo nuevo trabajando con alguno
+                        (o algunos) de los lenguajes que manejo o estoy aprendiendo a manejar, en el que pueda estar comodo haciendo lo que me gusta (preferiblemente en la 
+                        parte de frontend, aunque como he dicho antes tambien puedo asumir la parte de backend)
+                    </p>
+                    <p>
+                        Si piensas que puedo encajar en el perfil que buscas, puedes contactar conmigo a traves del formulario que hay en la pagina, <a href="tel:+34622881764">llamarme</a>, 
+                        enviarme un <a href="mailto:19aidan99@gmail.com">correo</a> o simplemente escribirme un <a href="https://wa.me/+34622881764">WhatsApp</a>
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
