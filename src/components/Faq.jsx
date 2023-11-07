@@ -10,6 +10,7 @@ import react from '../assets/img/react.png';
 import jquery from '../assets/img/jquery.png';
 import typescript from '../assets/img/typescript.png';
 import js from '../assets/img/js.png';
+import mysql from '../assets/img/mysql.png';
 
 import {
     Accordion,
@@ -110,6 +111,10 @@ export default function Faq() {
                             <div>
                                 <img src={java} />
                                 <p>Java</p>
+                            </div>
+                            <div>
+                                <img src={mysql} />
+                                <p>Mysql</p>
                             </div>
                         </div>
                     </div>
