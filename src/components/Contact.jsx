@@ -65,6 +65,8 @@ const Contact = () => {
   };
 
   return (
+  
+
     <div>
       <Cabecera>Contacto</Cabecera>
       <div className="cuerpo">

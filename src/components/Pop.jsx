@@ -3,8 +3,10 @@ import "../css/Pop.scss";
 
 export default function Pop({ children, error }) {
   return (
-    <div className={error ? "error" : "enviado"}>
+    <div id="pop">
+    <div id="pop-contenido" className={error ? "error" : "enviado"}>
       <p>{children}</p>
+    </div>
     </div>
   );
 }
