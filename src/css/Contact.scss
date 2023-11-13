@@ -46,7 +46,7 @@
       #enviar {
         background-color: transparent;
         color: #fff;
-        padding: 10px 30px 10px 30px;
+        padding: 10px 0px 10px 0px;
         border: 2px solid #fff;
         width: 45%;
         cursor: pointer;
@@ -74,8 +74,8 @@
       }
       &-textarea {
         width: 100%;
-        padding-left: 18px;
-        padding-right: 15px;
+        padding-left: 3%;
+        padding-right: 0px;
       }
       .boton {
         #enviar {
@@ -95,7 +95,7 @@
     }
     .boton {
       #enviar {
-        width: 70% !important;
+        width: 100% !important;
       }
     }
   }
