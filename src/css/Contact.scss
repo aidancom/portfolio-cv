@@ -29,7 +29,7 @@
       p {
         color: #fff;
       }
-
+ 
       textarea {
         width: 94%;
         background-color: transparent;
@@ -41,17 +41,17 @@
     .boton {
       display: flex;
       justify-content: center;
-
+      
       padding: 45px;
       #enviar {
-        background-color: transparent;
-        color: #fff;
-        padding: 10px 30px 10px 30px;
-        border: 2px solid #fff;
-        width: 45%;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.2s linear all;
+         background-color: transparent;
+         color: #fff;
+         padding: 10px 30px 10px 30px;
+         border: 2px solid #fff;
+         width: 45%;
+         cursor: pointer;
+         font-weight: bold;
+         transition: 0.2s linear all;
       }
       .valido {
         transition: 0.2s linear all;
@@ -65,25 +65,7 @@
   .contacto {
     margin: 15px 0px 15px 0px;
     width: 95%;
-    .formulario {
-      &-campos {
-        &-campo {
-          padding: 0px !important;
-          margin: 10px !important;
-        }
-      }
-      &-textarea {
-        width: 100%;
-        padding-left: 18px;
-        padding-right: 15px;
-      }
-      .boton {
-        #enviar {
-          width: 60%;
-        }
-      }
-    }
-  }
+}
 }
 @media (max-width: 768px) {
   .contacto {
@@ -98,7 +80,7 @@
         width: 70% !important;
       }
     }
-  }
+  } 
 }
 
 @media (max-width: 425px) {
@@ -121,5 +103,5 @@
         padding: 10px 5px 10px 5px !important;
       }
     }
-  }
+  } 
 }

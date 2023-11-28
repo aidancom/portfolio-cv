@@ -11,16 +11,23 @@ const Proyects = () => {
   const [proyectos, setProyectos] = useState([
     {
       titulo: "Aplicacion Veterinaria",
-      categoria: "React",
+      categoria: "React (Tailwind css)",
       descripcion: "Proyecto hecho usando Vite y React, el cual trata de un form para agregar, editar y borrar pacientes",
       url: "https://primero-proyecto-veterinaria.netlify.app/",
       key:  generarId()
     },
     {
       titulo: "Aplicacion control de gastos",
-      categoria: "React",
+      categoria: "React (Lenguaje SASS)",
       descripcion: "Proyecto hecho usando Vite y React, el cual trata de un controlador de gastos: pones la cantidad disponible y los gastos que vas teniendo, los cuales van restando al presupuesto incial, ademas de decirte lo que has gastado al mes",
       url: "https://calculadora-gastos-react.netlify.app/",
+      key:  generarId()
+    },
+    {
+      titulo: "Cotizador de Criptomonedas",
+      categoria: "React (Styled components)",
+      descripcion: "Una aplicacion que muestra informacion de las criptomonedas depediendo de la monea que se elija. Lo unico que hay que hacer es elegir la moneda, la criptomoneda deseada y darle a cottizar, se hara una peticion a la API y mostrara a informacion en tiempo real",
+      url: "https://cotizador-criptomonedas-aidan.netlify.app/",
       key:  generarId()
     }
   ]);
@@ -30,7 +37,6 @@ const Proyects = () => {
   useEffect (() => {
     if (filtro) {
         const proyectosfiltrados = proyectos.filter(proyecto => proyecto.categoria === filtro)
-
         setProyectosFiltrados(proyectosfiltrados)
     }
   }, [filtro, proyectos]) 
