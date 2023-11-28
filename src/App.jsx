@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./css/App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import music from "./assets/music/music.mp3"
-
 import Layout from "./components/Layout";
 import About from "./components/About";
 import Proyects from "./components/Proyects";
