@@ -103,7 +103,7 @@ export default function Faq() {
                             </div>
                         </div>
                         <p className='back'>Back-End</p>
-                        <div class="lenguajes-back"> 
+                        <div className="lenguajes-back"> 
                             <div>
                                 <img src={php} />
                                 <p>PHP</p>

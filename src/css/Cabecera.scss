@@ -1,74 +1,67 @@
 .slide {
-  background-image: url("/src/assets/img/wallpaper.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	background-image: url("/src/assets/img/wallpaper.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 450px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  h1 {
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-    text-shadow: #fff;
-    text-shadow: 0px 0px 20px rgb(255 255 255 / 100%);
-  }
+	h1 {
+		text-align: center;
+		color: #fff;
+		font-size: 50px;
+		text-shadow: #fff;
+		text-shadow: 0px 0px 20px rgb(255 255 255 / 100%);
+	}
 
-  .caja {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    background-color: #000;
-    padding: 15px 10px 15px 10px;
-    transition: 0.3s linear all;
-    border: 1px solid transparent;
+	.caja {
+		position: absolute;
+		top: 20%;
+		left: 20%;
+		background-color: #000;
+		padding: 15px 10px 15px 10px;
+		transition: 0.3s linear all;
+		border: 1px solid transparent;
 
-    &:hover {
-      transition: 0.3s linear all;
-      border: 1px solid #fff;
-    }
+		&:hover {
+			transition: 0.3s linear all;
+			border: 1px solid #fff;
+		}
 
-    a {
-      color: #fff;
-      text-decoration: none;
-      padding: 35px;
+		a {
+			color: #fff;
+			text-decoration: none;
+			padding: 35px;
 
-      &::before {
-        transition: 0.3s linear all;
-        content: "←";
-        margin-right: 10px;
-        position: absolute;
-        opacity: 0;
-        left: 20px;
-        font-size: 15px;
-      }
+			&::before {
+				transition: 0.3s linear all;
+				content: "←";
+				margin-right: 10px;
+				position: absolute;
+				opacity: 0;
+				left: 20px;
+				font-size: 15px;
+			}
 
-      &:hover {
-        &::before {
-          margin-right: 20px;
-          opacity: 1;
-        }
-      }
-    }
-  }
+			&:hover {
+
+				&::before {
+					margin-right: 20px;
+					opacity: 1;
+				}
+			}
+
+		}
+	}
 }
 
 @media (max-width: 425px) {
-  .slide {
-    .caja {
-      top: 25% !important;
-      left: 5% !important;
-    }
-  }
-}
-
-@media (max-height: 800px) {
-  .slide {
-    .caja {
-      top: 35%;
-      left: 10%;
-    }
-  }
+	.slide {
+		.caja {
+			top: 14%;
+			left: 5%;
+		}
+	}
 }
