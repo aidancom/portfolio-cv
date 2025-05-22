@@ -7,7 +7,7 @@ const Experience = () => {
   const isDesktop = useMediaQuery({minWidth: 1280})
 
   return (
-    <div className='px-5 w-full py-20 xl:h-full' id='experience'>
+    <div className='px-10 w-full py-20 xl:h-full' id='experience'>
        <h2 className='font-bold text-center text-3xl'>Experiencia</h2>
         <div className='max-w-7xl w-full mx-auto py-10 items-center xl:grid xl:grid-cols-[40%_20%_40%]'>
           <div>
@@ -77,7 +77,7 @@ const Experience = () => {
             />
           </div>
         </div>
-        <div className='max-w-7xl w-full mx-auto py-10 items-center xl:grid xl:grid-cols-[40%_20%_40%]'>
+        <div className='max-w-7xl w-full mx-auto pt-10 items-center xl:grid xl:grid-cols-[40%_20%_40%]'>
           <div>{/* para futuro */}</div>
           <div>{/* para futuro */}</div>
           <div>

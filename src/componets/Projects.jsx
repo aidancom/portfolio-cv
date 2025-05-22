@@ -10,12 +10,12 @@ const Projects = () => {
   return (
     <div className='px-10 w-full py-20 bg-[#E2F3F4] xl:h-full' id='projects'>
        <h2 className='font-bold text-center text-3xl'>Proyectos</h2>
-        <div className='max-w-7xl w-full mx-auto py-10'>
+        <div className='max-w-7xl w-full mx-auto pt-10'>
           <div className='flex justify-center'>
             <select 
               defaultValue={''}
               onChange={handleChange} 
-              className='bg-white w-1/2 p-1 rounded-lg border border-[#51A0AB]'
+              className='bg-white w-full p-1 rounded-lg border border-[#51A0AB] sm:w-1/2'
             >
               <option 
                 value='' 

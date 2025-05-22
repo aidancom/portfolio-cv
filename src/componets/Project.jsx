@@ -19,14 +19,14 @@ const Project = ({project}) => {
         <p className='text-2xl font-medium'>{project.name}</p>
         <p>{project.desc}</p>
         <p><span className='font-medium'>Stack tecnologico:</span> {stack}</p>
-        <div className='mt-6 flex justify-between'>
+        <div className='mt-6 flex justify-between flex-col space-y-4 sm:flex-row sm:space-y-0'>
           <a 
-            className='bg-black text-white px-4 py-1 rounded-lg transition transform hover:scale-103' 
+            className='bg-black text-white px-4 py-1 rounded-lg transition transform hover:scale-103 text-center' 
             href={project.githublink} 
             target='_blank'
           >Ver repositorio <FontAwesomeIcon className='pl-1' icon={faGithub}/></a>
           <a 
-            className='bg-[#51A0AB] text-white px-4 py-1 rounded-lg transition transform hover:scale-103' 
+            className='bg-[#51A0AB] text-white px-4 py-1 rounded-lg transition transform hover:scale-103 text-center' 
             href={project.projectlink} 
             target='_blank'
           >Ir al proyecto <FontAwesomeIcon className='pl-1' icon={faArrowUpRightFromSquare}/></a>

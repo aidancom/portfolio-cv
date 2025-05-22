@@ -13,7 +13,7 @@ const Contact = () => {
     <div className='px-10 w-full py-20 xl:h-full' id='contact'>
       <h2 className='font-bold text-center text-3xl'>¿Hablamos?</h2>
       <p className='text-center pt-5'>Escribe abajo tus datos de contacto si te ha interesado lo que has visto</p>
-      <div className='max-w-5xl w-full mx-auto py-10'>
+      <div className='max-w-5xl w-full mx-auto pt-10'>
         <form 
           ref={formData} 
           onSubmit={handleSubmit(sendForm)}

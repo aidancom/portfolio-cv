@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <div className='px-10 w-full xl:h-full bg-[#E2F3F4] py-20' id='skills'>
       <h2 className='font-bold text-center text-3xl'>Skills</h2>
-      <div className='max-w-7xl w-full mx-auto py-10 lg:gap-45 md:grid md:grid-cols-2 md:gap-30'>
+      <div className='max-w-7xl w-full mx-auto pt-10 lg:gap-45 md:grid md:grid-cols-2 md:gap-30'>
         <div className='space-y-7'>
           <div>
             <div className='flex justify-between items-center'>
