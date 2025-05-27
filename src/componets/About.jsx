@@ -1,5 +1,6 @@
+import { withNamespaces } from "react-i18next"
 
-const About = () => {
+const About = ({t}) => {
 
   const styledlSpan = 'font-medium'
   const styledLi = 'pt-3'
@@ -9,7 +10,7 @@ const About = () => {
       className='px-10 w-full py-20 xl:h-full' 
       id='about'
     >
-      <h2 className='font-bold text-center text-3xl'>Sobre mi</h2>
+      <h2 className='font-bold text-center text-3xl'>{t('sobreMiTitulo')}</h2>
       <div className='max-w-5xl w-full mx-auto py-10 sm:grid sm:grid-cols-[30%_70%]'>
         <div className='flex justify-center sm:block'>
           <img
@@ -19,50 +20,50 @@ const About = () => {
           /> 
         </div>
         <div className='w-[100%]'>
-          <p className='font-medium text-2xl'>Desarrollador de aplicaciones web</p>
+          <p className='font-medium text-2xl'>{t('sobreMiCargo')}</p>
           <div className='w-30 h-1 bg-[#6DC7D1] mt-2'></div>
           <p className='text-[15px] pt-5'>
-            Soy desarrollador frontend con experiencia en React, PHP, WordPress, JavaScript, HTML, CSS y SCSS. Me especializo en crear interfaces web funcionales, accesibles y visualmente atractivas, aplicando buenas prácticas y cuidando cada detalle del desarrollo.
+            {t('sobreMiDesc1')}
             <br></br><br></br>
-            Me motiva el aprendizaje continuo y siempre busco progresar, asumir nuevos retos y mejorar mis habilidades. En cada proyecto doy lo mejor de mí, con el objetivo de crecer profesionalmente y entregar soluciones de calidad.            
+            {t('sobreMiDesc2')}
           </p>
         </div>
       </div>
       <div className='pt-5 max-w-5xl w-full mx-auto justify-between sm:flex sm:gap-5'>
         <ul>
           <li className={styledLi}>
-            <span className={styledlSpan}>Nombre: </span>Aidan Verdejo Maynero
+            <span className={styledlSpan}>{t('nombreTitulo')}: </span>Aidan Verdejo Maynero
           </li>
           <li className={styledLi}>
-            <span className={styledlSpan}>Edad: </span>26
+            <span className={styledlSpan}>{t('edadTitulo')}: </span>26
           </li>
           <li className={styledLi}>
-            <span className={styledlSpan}>Ubicación: </span>Paterna, Valencia
+            <span className={styledlSpan}>{t('ubicacionTitulo')}: </span>Paterna, Valencia
           </li>
           <li className={styledLi}>
             <span className={styledlSpan}>Email: </span>
             <a className='text-[#2aa2af]' href='mailto:19aidan99@gmail.com'>19aidan99@gmail.com</a>
           </li>
           <li className={styledLi}>
-            <span className={styledlSpan}>Idiomas: </span>Español (nativo), Valenciano (avanzado), Inglés (intermedio)
+            <span className={styledlSpan}>{t('idiomasTitulo')}: </span>{t('idiomasDesc')}
           </li>
         </ul>
         <ul>
           <li className={styledLi}>
-            <span className={styledlSpan}>Estudios: </span>Desarrollo de Aplicaciones Web
+            <span className={styledlSpan}>{t('estudiosTitulo')}: </span>{t('estudiosDesc')}
           </li>
           <li className={styledLi}>
-            <span className={styledlSpan}>Experiencia: </span>+3 años en desarrollo frontend y 1 en backend
+            <span className={styledlSpan}>{t('experienciaTitulo')}: </span>{t('experienciaDesc')}
           </li>
           <li className={styledLi}>
-            <span className={styledlSpan}>Tecnologías: </span>React, PHP, WordPress, JS, HTML,... {''}
-            <a className='text-[#2aa2af]' href='#skills'>Ver más</a>
+            <span className={styledlSpan}>{t('tecnologias')}: </span>React, PHP, WordPress, JS, HTML,... {''}
+            <a className='text-[#2aa2af]' href='#skills'>{t('verMas')}</a>
           </li>
           <li className={styledLi}>
-            <span className={styledlSpan}>Soft Skills: </span>Resolución de problemas, adaptabilidad, autogestión
+            <span className={styledlSpan}>{t('habilidades')}: </span>{t('habilidadesDesc')}
           </li>
           <li className={styledLi}>
-            <span className={styledlSpan}>Interés profesional:: </span>Mejora continua, aprender nuevas tecnologías
+            <span className={styledlSpan}>{t('interesProfesionalTitulo')}: </span>{t('interesProfesionalDesc')}
           </li>
         </ul>
       </div>
@@ -70,4 +71,4 @@ const About = () => {
   )
 }
 
-export default About
+export default withNamespaces()(About)

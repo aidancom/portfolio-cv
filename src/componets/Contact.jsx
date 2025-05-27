@@ -1,9 +1,10 @@
 import { useFormValidation } from '../hooks/useFormValidation'
 import Errors from './Errors'
 import '../assets/css/spinner.css'
+import { withNamespaces } from 'react-i18next'
 
 
-const Contact = () => {
+const Contact = ({t}) => {
 
   const {register, handleSubmit, sendForm, errors, formData, loading} = useFormValidation()
   const styledDiv = 'flex flex-col space-y-2'
@@ -11,8 +12,8 @@ const Contact = () => {
 
   return (
     <div className='px-10 w-full py-20 xl:h-full' id='contact'>
-      <h2 className='font-bold text-center text-3xl'>¿Hablamos?</h2>
-      <p className='text-center pt-5'>Escribe abajo tus datos de contacto si te ha interesado lo que has visto</p>
+      <h2 className='font-bold text-center text-3xl'>{t('contactoTitulo')}</h2>
+      <p className='text-center pt-5'>{t('contactoDesc')}</p>
       <div className='max-w-5xl w-full mx-auto pt-10'>
         <form 
           ref={formData} 
@@ -36,11 +37,11 @@ const Contact = () => {
         )}
           <fieldset className='block space-y-2 gap-5 sm:grid sm:grid-cols-2'>
             <div className={styledDiv}>
-              <label htmlFor='name'>Nombre*</label>
+              <label htmlFor='name'>{t('contactoNombre')}*</label>
               <input 
                 className={styledInput} 
                 type='text' 
-                placeholder='Escribe tu nombre'
+                placeholder={t('contactoNombrePlaceholder')}
                 id='name'
                 {...register('name', {
                   required: {value: true, message: 'Este campo es obligatorio'}
@@ -49,11 +50,11 @@ const Contact = () => {
               {errors.name && <Errors>{errors?.name?.message}</Errors>}
             </div>
             <div className={styledDiv}>
-              <label htmlFor='phone'>Teléfono*</label>
+              <label htmlFor='phone'>{t('contactoTelefono')}*</label>
               <input 
                 className={styledInput} 
                 type='text' 
-                placeholder='Escribe tu nombre'
+                placeholder={t('contactoTeléfonoPlaceholder')}
                 id='phone' 
                 {...register('phone', {
                   required: {value: true, message: 'Este campo es obligatorio'}
@@ -66,7 +67,7 @@ const Contact = () => {
               <input 
                 className={styledInput} 
                 type='text' 
-                placeholder='Escribe tu nombre'
+                placeholder={t('contactoEmailPlaceHolder')}
                 id='email' 
                 {...register('email', {
                   required: {value: true, message: 'Este campo es obligatorio'},
@@ -76,11 +77,11 @@ const Contact = () => {
               {errors.email && <Errors>{errors?.email?.message}</Errors>}
             </div>
             <div className={styledDiv}>
-              <label htmlFor='company_name'>Nombre de tu empresa*</label>
+              <label htmlFor='company_name'>{t('contactoNombreEmpresa')}*</label>
               <input 
                 className={styledInput} 
                 type='text' 
-                placeholder='Escribe tu nombre'
+                placeholder={t('contactoNombreEmpresaPlaceholder')}
                 id='company_name' 
                 {...register('company_name', {
                   required: {value: true, message: 'Este campo es obligatorio'}
@@ -89,11 +90,11 @@ const Contact = () => {
               {errors.company_name && <Errors>{errors?.company_name?.message}</Errors>}
             </div>
             <div className={styledDiv}>
-              <label htmlFor='company_web'>Web de la empresa*</label>
+              <label htmlFor='company_web'>{t('contactoWebEmpresa')}*</label>
               <input 
                 className={styledInput} 
                 type='text' 
-                placeholder='Escribe tu nombre'
+                placeholder={t('contactoWebEmpresaPlaceholder')}
                 id='company_web' 
                 {...register('company_web', {
                   required: {value: true, message: 'Este campo es obligatorio'}
@@ -102,7 +103,7 @@ const Contact = () => {
               {errors.company_web && <Errors>{errors?.company_web?.message}</Errors>}
             </div>
             <div className={styledDiv}>
-              <label htmlFor='subject'>Asunto*</label>
+              <label htmlFor='subject'>{t('contactoAsunto')}*</label>
               <select 
                 className={styledInput} 
                 name='subject' 
@@ -113,21 +114,21 @@ const Contact = () => {
                   maxLength: { value: 500, message: 'Máximo 500 caracteres' }
                 })}
               >
-                <option value='' disabled>--- Seleccione una opcion ---</option>
-                <option value='Interes en contratación'>He visto tu perfil/cv y me ha interesado para mi empresa</option>
-                <option value='Proponer un proyecto'>Me gustaría proponerte un proyecto</option>
+                <option value='' disabled>--- {t('proyectosSeleccionaOpcion')} ---</option>
+                <option value='Interes en contratación'>{t('contactoAsunto1')}</option>
+                <option value='Proponer un proyecto'>{t('contactoAsunto2')}</option>
               </select>
               {errors.subject && <Errors>{errors?.subject?.message}</Errors>}
             </div>
           </fieldset>
           <fieldset className='pt-5'>
             <div className={styledDiv}>
-              <label htmlFor='reason'>¿Qué te trae por aquí?*</label>
+              <label htmlFor='reason'>{t('contactoMotivo')}*</label>
               <textarea 
                 className='border p-1 rounded-lg' 
                 name='reason'
                 id='reason'
-                placeholder='Escribe aqui tu motivo de contacto'
+                placeholder={t('contactoMotivoPlaceholder')}
                 {...register('reason', {
                   required: { value: true, message: 'Este campo es obligatorio' },
                   maxLength: { value: 500, message: 'Máximo 500 caracteres' }
@@ -141,7 +142,7 @@ const Contact = () => {
             <input 
               type='submit' 
               className='bg-[#51A0AB] text-white py-2 px-10 mt-7 rounded-lg cursor-pointer border font-medium border-white transition hover:border-[#51A0AB] hover:bg-white hover:text-[#51A0AB]'
-              value='Enviar' 
+              value={t('contactoBoton')}
             />
           </div>
         </form>
@@ -150,4 +151,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default withNamespaces()(Contact)

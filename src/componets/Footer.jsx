@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { withNamespaces } from 'react-i18next'
 
-const Footer = () => {
+const Footer = ({t}) => {
 
   return (
     <div className='bg-[#9DDDDD] p-5 sm:grid sm:grid-cols-3 '>
@@ -58,11 +59,11 @@ const Footer = () => {
         </ul>
       </div>
       <div className='text-center'>
-        <p>Copyright © {new Date().getFullYear()} Todos los derechos reservados</p>
+        <p>Copyright © {new Date().getFullYear()} {t('copyright')}</p>
       </div>
       <div></div>
     </div>
   )
 }
 
-export default Footer
+export default withNamespaces()(Footer)

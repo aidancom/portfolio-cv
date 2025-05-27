@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
+import { withNamespaces } from 'react-i18next'
 
-const Skills = () => {
+const Skills = ({t}) => {
 
   const styledP = 'uppercase tracking-[6px]'
 
   return (
     <div className='px-10 w-full xl:h-full bg-[#E2F3F4] py-20' id='skills'>
-      <h2 className='font-bold text-center text-3xl'>Skills</h2>
+      <h2 className='font-bold text-center text-3xl'>{t('habilidades')}</h2>
       <div className='max-w-7xl w-full mx-auto pt-10 lg:gap-45 md:grid md:grid-cols-2 md:gap-30'>
         <div className='space-y-7'>
           <div>
@@ -153,4 +154,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default withNamespaces()(Skills)

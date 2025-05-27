@@ -1,14 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowDown, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { useMediaQuery } from 'react-responsive'
+import { withNamespaces } from 'react-i18next'
 
-const Experience = () => {
+const Experience = ({t}) => {
 
   const isDesktop = useMediaQuery({minWidth: 1280})
 
   return (
     <div className='px-10 w-full py-20 xl:h-full' id='experience'>
-       <h2 className='font-bold text-center text-3xl'>Experiencia</h2>
+       <h2 className='font-bold text-center text-3xl'>{t('experienciaTitulo')}</h2>
         <div className='max-w-7xl w-full mx-auto py-10 items-center xl:grid xl:grid-cols-[40%_20%_40%]'>
           <div>
             <div className='border border-[#51A0AB] bg-[#f8ffff] overflow-hidden p-3 rounded-lg'>
@@ -23,14 +24,14 @@ const Experience = () => {
                   icon={faArrowUpRightFromSquare}
                 />
               </a>
-              <p className='text-[19px]'>Desarrollador Web</p>
+              <p className='text-[19px]'>{t('puestoEmpresa')}</p>
               <p>2020-2023</p>
               <p className='pt-3'>
-                <span className='font-bold'>Descripción:</span> {''}
-                  Durante tres años formé parte de esta empresa, donde comencé como becario y, gracias a mi desempeño, fui incorporado al equipo. Durante este tiempo, desarrollé nuevas páginas web para clientes, gestioné modificaciones en sitios existentes mediante un sistema de tickets, contribuí a la mejora del framework interno en PHP y realicé ajustes puntuales en la página oficial desarrollada en WordPress.
+                <span className='font-bold'>{t('descripcionTrabajoTitulo')}:</span> {''}
+                {t('descripcionTrabajo1Desc')}
               </p>
               <p className='pt-1'>
-                <span className='font-bold'>Stack tecnológico:</span> {''} 
+                <span className='font-bold'>{t('stackTecnologico')}:</span> {''} 
                 JavaScript &bull; PHP &bull; SASS &bull; CSS &bull; HTML
               </p>
             </div>
@@ -54,14 +55,14 @@ const Experience = () => {
                   icon={faArrowUpRightFromSquare}
                 />
               </a>
-              <p className='text-[19px]'>Desarrollador Web</p>
+              <p className='text-[19px]'>{t('puestoEmpresa')}</p>
               <p>2023-2025</p>
               <p className='pt-3'>
-                <span className='font-bold'>Descripción:</span> {''}
-                 Durante un año y medio trabajé en esta empresa, donde participé activamente en la migración de sitios antiguos desarrollados con HTML, CSS y PHP a un entorno multisite en WordPress, con el objetivo de centralizar su gestión y modernizar su apariencia. También desarrollé nuevas webs en WordPress y, cuando fue necesario, implementé plugins personalizados para adaptarnos a las necesidades específicas de cada proyecto.
+                <span className='font-bold'>{t('descripcionTrabajoTitulo')}:</span> {''}
+                {t('descripcionTrabajo2Desc')}
               </p>
               <p className='pt-1'>
-                <span className='font-bold'>Stack tecnológico:</span> {''} 
+                <span className='font-bold'>{t('stackTecnologico')}:</span> {''} 
                 JavaScript &bull; PHP &bull; WordPress &bull; CSS &bull; HTML
               </p>
             </div>
@@ -82,8 +83,8 @@ const Experience = () => {
           <div>{/* para futuro */}</div>
           <div>
             <div className='border border-[#51A0AB] bg-[#f8ffff] overflow-hidden p-3 rounded-lg text-center'>
-              <h3 className='text-3xl font-medium'>📢 Próximamente</h3>
-              <p className='pt-5'>¿Eres una empresa? Este espacio puede ser <span className='font-bold'>tuyo</span>.</p>
+              <h3 className='text-3xl font-medium'>📢 {t('proximamenteTitulo')}</h3>
+              <p className='pt-5'>{t('proximamenteDesc')} <span className='font-bold'>{t('proximamenteDescPalabra')}</span>.</p>
             </div>
           </div>
         </div>
@@ -91,4 +92,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default withNamespaces()(Experience)

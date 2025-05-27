@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX, faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import i18n from '../i18n'
+import { withNamespaces } from 'react-i18next'
 
-const Header = () => {
+const Header = ({t}) => {
   
   const [open, setOpen] = useState(false)
   const {about, skills, experience, projects, contact} = useNavigatePage()
@@ -24,7 +26,16 @@ const Header = () => {
         src='./img/logo.png'
         alt='Logo Aidan'
       />
-      <div className='pr-4'>
+      <div className='pr-4 flex'>
+        <div className='pr-5'>
+          <select 
+            className='border'
+            onChange={e => i18n.changeLanguage(e.target.value)}
+          >
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
         <div onClick={() => setOpen(true)}>
           <FontAwesomeIcon 
             className='text-2xl text-[#51A0AB] cursor-pointer' 
@@ -55,7 +66,7 @@ const Header = () => {
                     href='#about' 
                     onClick={clicked(about)}
                   >
-                    Sobre mí
+                    {t('sobreMiTitulo')}
                   </a>
                   </li>
                 <li className={styleli}>
@@ -63,7 +74,7 @@ const Header = () => {
                     href='#skills' 
                     onClick={clicked(skills)}
                   >
-                    Skills
+                    {t('habilidades')}
                   </a>
                 </li>
                 <li className={styleli}>
@@ -71,7 +82,7 @@ const Header = () => {
                     href='#experience' 
                     onClick={clicked(experience)}
                   >
-                    Experiencia
+                    {t('experienciaTitulo')}
                   </a>
                 </li>
                 <li className={styleli}>
@@ -79,7 +90,7 @@ const Header = () => {
                     href='#projects' 
                     onClick={clicked(projects)}
                   >
-                    Proyectos
+                    {t('proyectosTitulo')}
                   </a>
                 </li>
                 <li className={styleli}>
@@ -87,7 +98,7 @@ const Header = () => {
                     href='#contact' 
                     onClick={clicked(contact)}
                   >
-                    Contacto
+                    {t('contactoTituloMenu')}
                   </a>
                 </li>
               </ul>
@@ -100,4 +111,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default withNamespaces()(Header)

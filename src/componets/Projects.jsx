@@ -1,15 +1,16 @@
 import { useProyects } from '../hooks/useProyects'
 import Project from './Project'
 import '../assets/css/spinner.css'
+import { withNamespaces } from 'react-i18next'
 
 
-const Projects = () => {
+const Projects = ({t}) => {
 
   const {handleChange, data, categories, loading} = useProyects()
 
   return (
     <div className='px-10 w-full py-20 bg-[#E2F3F4] xl:h-full' id='projects'>
-       <h2 className='font-bold text-center text-3xl'>Proyectos</h2>
+       <h2 className='font-bold text-center text-3xl'>{t('proyectosTitulo')}</h2>
         <div className='max-w-7xl w-full mx-auto pt-10'>
           <div className='flex justify-center'>
             <select 
@@ -20,7 +21,7 @@ const Projects = () => {
               <option 
                 value='' 
                 disabled={true}
-              >--- Selecciona una opción ---</option>
+              >--- {t('proyectosSeleccionaOpcion')} ---</option>
               {categories.map(category => (
                 <option 
                   key={category} 
@@ -57,4 +58,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default withNamespaces()(Projects)
