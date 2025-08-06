@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion'
+import { useEffect } from 'react';
 import { withNamespaces } from 'react-i18next'
+import { useSkills } from '../hooks/useSkills';
 
 const Skills = ({t}) => {
 
   const styledP = 'uppercase tracking-[6px]'
+  const {skills} = useSkills()
+  console.log(skills)
 
   return (
     <div className='px-10 w-full xl:h-full bg-[#E2F3F4] py-20' id='skills'>

@@ -5,8 +5,10 @@ export const useProyects = () => {
   const [data, setData] = useState(projects)
   const [loading, setLoading]= useState(false)
   const [categories, setCategories] = useState([])
+  const url = window.location.href
 
   useEffect(() => setCategories(Array.from(new Set(projects.map(project => project.stack).toString().split(',')))), [])
+
 
   const handleChange = (e) => {
     setLoading(true)

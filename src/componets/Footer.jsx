@@ -7,7 +7,7 @@ const Footer = ({t}) => {
   return (
     <div className='bg-[#9DDDDD] p-5 sm:grid sm:grid-cols-3 '>
       <div>
-        <ul className='flex justify-center sm:justify-start pb-5 space-x-3'>
+        <ul className='flex justify-center space-x-3 sm:justify-start'>
           <li>
             <a 
               href='https://github.com/aidancom/' 
