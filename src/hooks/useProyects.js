@@ -2,12 +2,24 @@ import { useEffect, useState } from "react"
 import { projects } from "../db/projects"
 
 export const useProyects = () => {
-  const [data, setData] = useState(projects)
+  const [data, setData] = useState([])
   const [loading, setLoading]= useState(false)
   const [categories, setCategories] = useState([])
-  const url = window.location.href
+  const url = 'http://localhost:5000/'
 
-  useEffect(() => setCategories(Array.from(new Set(projects.map(project => project.stack).toString().split(',')))), [])
+  useEffect(() => {
+    setCategories(Array.from(new Set(projects.map(project => project.stack).toString().split(','))))
+    fetch(url + '/api/getData', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({"type": "projects"})
+    })
+    .then(res => res.json())
+    .then(data => setData(data))
+    .catch(e => console.log(`Error: ${e}`))
+  } , [])
 
 
   const handleChange = (e) => {

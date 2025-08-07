@@ -22,12 +22,12 @@ const Project = ({project}) => {
         <div className='mt-6 flex justify-between flex-col space-y-4 sm:flex-row sm:space-y-0'>
           <a 
             className='bg-black text-white px-4 py-1 rounded-lg transition transform hover:scale-103 text-center' 
-            href={project.githublink} 
+            href={project.repository} 
             target='_blank'
           >Ver repositorio <FontAwesomeIcon className='pl-1' icon={faGithub}/></a>
           <a 
             className='bg-[#51A0AB] text-white px-4 py-1 rounded-lg transition transform hover:scale-103 text-center' 
-            href={project.projectlink} 
+            href={project.url} 
             target='_blank'
           >Ir al proyecto <FontAwesomeIcon className='pl-1' icon={faArrowUpRightFromSquare}/></a>
         </div>

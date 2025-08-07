@@ -6,7 +6,13 @@ export const useSkills = () => {
   const url = 'http://localhost:5000/'
   
   useEffect(() => {
-    fetch(url + '/api/getSkills')
+    fetch(url + '/api/getData', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({"type": "skills"})
+    })
     .then(res => res.json())
     .then(data => setSkills(data))
     .catch(error => console.log(error))
