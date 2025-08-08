@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
-import { projects } from "../db/projects"
 
 export const useProyects = () => {
   const [data, setData] = useState([])
+  const [filteredData, setFilteredData] = useState([])
   const [loading, setLoading]= useState(false)
   const [categories, setCategories] = useState([])
-  const url = 'http://localhost:5000/'
+  const url = 'https://portfolio-cv-backend-ltln.onrender.com'
 
   useEffect(() => {
-    setCategories(Array.from(new Set(projects.map(project => project.stack).toString().split(','))))
+    
     fetch(url + '/api/getData', {
       method: 'POST',
       headers: {
@@ -19,13 +19,20 @@ export const useProyects = () => {
     .then(res => res.json())
     .then(data => setData(data))
     .catch(e => console.log(`Error: ${e}`))
+    
   } , [])
+
+  useEffect(() => {
+    if (data.length > 0) {
+      setCategories(Array.from(new Set(data.map(project => project.stack).flat())))
+    }
+  }, [data])
 
 
   const handleChange = (e) => {
     setLoading(true)
     setTimeout(() => {
-      setData(projects.filter(project => project?.stack.includes(e.target.value)))
+      setFilteredData(data.filter(project => project?.stack.includes(e.target.value)))
       setLoading(false)
     }, 1000);
     
@@ -35,6 +42,7 @@ export const useProyects = () => {
     data,
     handleChange,
     categories,
-    loading
+    loading,
+    filteredData
   }
 }

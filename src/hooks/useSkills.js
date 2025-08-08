@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 export const useSkills = () => {
 
   const [skills, setSkills] = useState([]);
-  const url = 'http://localhost:5000/'
+  const url = 'https://portfolio-cv-backend-ltln.onrender.com'
   
   useEffect(() => {
     fetch(url + '/api/getData', {

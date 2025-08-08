@@ -6,7 +6,7 @@ import { withNamespaces } from 'react-i18next'
 
 const Projects = ({t}) => {
 
-  const {handleChange, data, categories, loading} = useProyects()
+  const {handleChange, data, categories, loading, filteredData} = useProyects()
 
   return (
     <div className='px-10 w-full py-20 bg-[#E2F3F4] xl:h-full' id='projects'>
@@ -45,12 +45,22 @@ const Projects = ({t}) => {
             </div>
           ) : (
             <div className='gap-15 pt-10 space-y-15 lg:grid lg:grid-cols-2 lg:space-y-0'>
-              {data.map(project => (
-                <Project 
-                  key={project.id} 
-                  project={project}
-                />
-              ))}
+              {filteredData.length > 0  ? (
+                filteredData.map(project => (
+                  <Project 
+                    key={project.id} 
+                    project={project}
+                  />
+                ))      
+              ) : (
+                data.map(project => (
+                  <Project 
+                    key={project.id} 
+                    project={project}
+                  />
+                ))
+              )
+              }
             </div>
           )}
         </div>
