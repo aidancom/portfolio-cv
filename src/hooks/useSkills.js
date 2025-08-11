@@ -3,10 +3,9 @@ import { useEffect, useState } from "react"
 export const useSkills = () => {
 
   const [skills, setSkills] = useState([]);
-  const url = 'https://portfolio-cv-backend-ltln.onrender.com'
   
   useEffect(() => {
-    fetch(url + '/api/getData', {
+   fetch(`${import.meta.env.VITE_BACK_URL}/api/getData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

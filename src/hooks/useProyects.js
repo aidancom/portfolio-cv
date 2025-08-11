@@ -5,11 +5,10 @@ export const useProyects = () => {
   const [filteredData, setFilteredData] = useState([])
   const [loading, setLoading]= useState(false)
   const [categories, setCategories] = useState([])
-  const url = 'https://portfolio-cv-backend-ltln.onrender.com'
 
   useEffect(() => {
     
-    fetch(url + '/api/getData', {
+    fetch(`${import.meta.env.VITE_BACK_URL}/api/getData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

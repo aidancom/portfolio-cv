@@ -12,12 +12,12 @@ const Skills = ({t}) => {
     <div className='px-10 w-full xl:h-full bg-[#E2F3F4] py-20' id='skills'>
       <h2 className='font-bold text-center text-3xl'>{t('habilidades')}</h2>
       <div className='max-w-7xl w-full mx-auto pt-10 lg:gap-45 md:gap-30'>
-        <div className='space-y-7 space-x- flex flex-wrap justify-between'>
+        <div className='space-y-7 space-x- flex flex-wrap justify-between flex-col md:flex-row'>
           {skills.length == 0 ? (
             <p className='text-center'>En construccion</p>
           ) : (
             skills.map(skill => (
-              <div className='w-[47%]'>
+              <div className='w-full md:w-[47%]'>
                 <div className='flex justify-between items-center'>
                   <p className={styledP}>{skill.skill}</p>
                   <p>{skill.level}%</p>
