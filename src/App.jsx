@@ -22,7 +22,7 @@ const App = () => {
   
 
   useEffect(() => {
-   fetch(`http://localhost:5000/api/sendVisitor`)
+   fetch(`${import.meta.env.VITE_BACK_URL}/api/sendVisitor`)
     .then(res => res.json())
     .then(data => console.log(data))
     .catch(error => console.log(error)) 
