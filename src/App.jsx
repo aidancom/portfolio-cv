@@ -7,7 +7,7 @@ import Skills from "./componets/Skills";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigatePage } from "./hooks/useNavigatePage";
 import { useScrollListener } from "./utilities/useScrollListener";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Contact from "./componets/Contact";
@@ -20,6 +20,14 @@ const App = () => {
   const [up, setUp] = useState(false)
   useScrollListener(setUp)
   
+
+  useEffect(() => {
+   fetch(`http://localhost:5000/api/sendVisitor`)
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error)) 
+  }, [])
+
   return (
     <main>
       <Header/>

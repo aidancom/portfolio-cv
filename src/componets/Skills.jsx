@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { useEffect } from 'react';
 import { withNamespaces } from 'react-i18next'
 import { useSkills } from '../hooks/useSkills';
 

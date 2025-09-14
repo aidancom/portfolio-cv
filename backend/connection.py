@@ -8,4 +8,7 @@ database = conn['portfolio']
 
 column_skills = database['skills']
 column_projects = database['projects']
+column_visits = database['visits']
+
+columns = database.list_collection_names()
 
