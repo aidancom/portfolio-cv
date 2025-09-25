@@ -1,9 +1,21 @@
+import datetime
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from connection import column_skills, column_projects, column_visits, columns
 
+
 app = Flask(__name__)
 CORS(app)
+
+def get_client_ip(request):
+    xff = request.headers.get('X-Forwarded-For', '')
+    if xff:
+        return xff.split(',')[0].strip()
+    cf = request.headers.get('CF-Connecting-IP')
+    if cf:
+        return cf.strip()
+    return request.remote_addr
 
 @app.route('/api/getData', methods=['POST'])
 def get_data():
@@ -20,15 +32,16 @@ def get_data():
 
 @app.route('/api/sendVisitor')
 def send_visit():
+
+  date = datetime.datetime.now()
+
   data = {
-    'id': '1234567890',
-    'visits': 0
+    'date': f'{date.strftime("%d")}/{date.strftime("%m")}/{date.strftime("%Y")}',
+    'hour': f'{date.strftime("%H")}:{date.strftime("%M")}',
+    'ip': get_client_ip(request)
   }
 
-  if 'visits' in columns:
-    column_visits.update_one({'id': '1234567890'}, {'$inc': {'visits': 1}})
-  else:
-    column_visits.insert_one(data)
+  column_visits.insert_one(data)
 
   return jsonify({'status': 'success'})
 
