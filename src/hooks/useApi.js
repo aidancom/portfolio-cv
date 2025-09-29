@@ -4,17 +4,14 @@ export const useApi = (endpoint, meth = "GET", body = null) => {
   const [res, setRes] = useState(null);
 
   const backends = [
-    import.meta.env.VITE_BACK_URL,        
-    import.meta.env.VITE_BACK_URL_BACKUP  
+    import.meta.env.VITE_BACK_URL,
+    import.meta.env.VITE_BACK_URL_BACKUP
   ];
 
   useEffect(() => {
-    let isMounted = true;
-
     const fetchData = async () => {
       for (let backend of backends) {
         try {
-          console.log(`Intentando backend: ${backend}`);
           const response = await fetch(`${backend}/api/${endpoint}`, {
             method: meth,
             headers: {
@@ -25,25 +22,18 @@ export const useApi = (endpoint, meth = "GET", body = null) => {
 
           if (response.ok) {
             const data = await response.json();
-            console.log(`Éxito en backend: ${backend}`);
-            if (isMounted) setRes(data);
-            return;
+            setRes(data);
+            return; 
           } else {
-            console.warn(`Error HTTP en ${backend}: ${response.status}`);
+            console.warn(`Error: ${response.status}`);
           }
         } catch (err) {
-          console.warn(`Error con ${backend}:`, err.message);
+          console.warn(`Error con ${backend}, probando siguiente...`);
         }
       }
-      console.error("Ningún backend respondió correctamente.");
-      if (isMounted) setRes(null);
     };
 
     fetchData();
-
-    return () => {
-      isMounted = false; 
-    };
   }, [endpoint, meth, body]);
 
   return { res };
