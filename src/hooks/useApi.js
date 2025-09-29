@@ -21,7 +21,7 @@ export const useApi = (endpoint, meth = "GET", body = null) => {
         console.warn(`Error: ${response.status}`);
       }
     } catch (err) {
-      console.warn(`Error con ${backend}, probando siguiente...`);
+      console.warn(`Error: ${err}`);
     }
   };
 
