@@ -8,10 +8,8 @@ export const useSkills = () => {
   const {res} = useApi("getData", "POST", {"type": "skills"})
 
   useEffect(() => {
-    if (res) {
-      setSkills(res)
-    }
-  }, [res])
+    setSkills(res)
+  }, [])
 
   return {
     skills

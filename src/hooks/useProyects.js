@@ -6,15 +6,12 @@ export const useProyects = () => {
   const [filteredData, setFilteredData] = useState([])
   const [loading, setLoading]= useState(false)
   const [categories, setCategories] = useState([])
-
-
-    const {res} = useApi("getData", "POST", {"type": "projects"})
+  
+  const {res} = useApi("getData", "POST", {"type": "projects"})
   
     useEffect(() => {
-      if (res) {
-        setData(res)
-      }
-    }, [res])
+      setData(res)
+    }, [])
 
   useEffect(() => {
     if (data.length > 0) {
