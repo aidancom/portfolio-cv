@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useApi } from "./useApi"
 
 export const useProyects = () => {
   const [data, setData] = useState([])
@@ -6,20 +7,14 @@ export const useProyects = () => {
   const [loading, setLoading]= useState(false)
   const [categories, setCategories] = useState([])
 
-  useEffect(() => {
-    
-    fetch(`${import.meta.env.VITE_BACK_URL}/api/getData`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({"type": "projects"})
-    })
-    .then(res => res.json())
-    .then(data => setData(data))
-    .catch(e => console.log(`Error: ${e}`))
-    
-  } , [])
+
+    const {res} = useApi("getData", "POST", {"type": "projects"})
+  
+    useEffect(() => {
+      if (res) {
+        setData(res)
+      }
+    }, [res])
 
   useEffect(() => {
     if (data.length > 0) {

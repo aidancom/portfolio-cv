@@ -1,21 +1,17 @@
 import { useEffect, useState } from "react"
+import { useApi } from "./useApi";
 
 export const useSkills = () => {
 
   const [skills, setSkills] = useState([]);
   
+  const {res} = useApi("getData", "POST", {"type": "skills"})
+
   useEffect(() => {
-   fetch(`${import.meta.env.VITE_BACK_URL}/api/getData`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({"type": "skills"})
-    })
-    .then(res => res.json())
-    .then(data => setSkills(data))
-    .catch(error => console.log(error))
-  }, [])
+    if (res) {
+      setSkills(res)
+    }
+  }, [res])
 
   return {
     skills

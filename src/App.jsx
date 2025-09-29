@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Contact from "./componets/Contact";
 import Footer from "./componets/Footer";
 import { ToastContainer } from "react-toastify";
+import { useApi } from "./hooks/useApi";
 
 const App = () => {
   
@@ -20,12 +21,10 @@ const App = () => {
   const [up, setUp] = useState(false)
   useScrollListener(setUp)
   
+  const {res} = useApi("sendVisitor")
 
   useEffect(() => {
-   fetch(`${import.meta.env.VITE_BACK_URL}/api/sendVisitor`)
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error)) 
+    console.log(res)
   }, [])
 
   return (

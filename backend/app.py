@@ -67,9 +67,10 @@ def send_visit():
         column_visits.update_one({"ip": ip}, {"$inc": {"visits": 1}})
         return jsonify({'status': 'success'})
       except Exception as e:
-        return jsonify({'status': 'error', 'message': e})
+        return jsonify({'status': 'error', 'message': str(e)})
     else:
       try:
+        
         data = {
           'ip': ip,
           'continent': ip_details["continent"],           
@@ -83,7 +84,7 @@ def send_visit():
         column_visits.insert_one(data)
         return jsonify({'status': 'success'})
       except Exception as e:
-        return jsonify({'status': 'error', 'message': e})
+        return jsonify({'status': 'error', 'message': str(e)})
 
   
 if __name__ == "__main__":
